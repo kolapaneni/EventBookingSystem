@@ -1,0 +1,665 @@
+{
+	"info": {
+		"_postman_id": "22300f4d-f903-4ae7-854b-90fa3b595606",
+		"name": "Events",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Event",
+			"item": [
+				{
+					"name": "http://localhost:8000/event/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 78d31d8f82921b99977eda61728d7fecbaeb1304",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"event1\",\n    \"description\": \"this is a event\",\n    \"event_windows\": [\n        {\n            \"start_time\": \"10:00\",\n            \"end_time\": \"12:30\",\n            \"total_seats\": 100\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/event/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"event",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/event/list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 78d31d8f82921b99977eda61728d7fecbaeb1304",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/event/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"event",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/event/update/1",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 78d31d8f82921b99977eda61728d7fecbaeb1304",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"event1\",\n    \"description\": \"this is a event 1\",\n    \"event_windows\": [\n        {   \n            \"event_id\": 1,\n            \"start_time\": \"10:00\",\n            \"end_time\": \"12:30\",\n            \"total_seats\": 100\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/event/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"event",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/event/get/1",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 78d31d8f82921b99977eda61728d7fecbaeb1304",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/event/get/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"event",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "get auth token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "mahesh",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "61437",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/get-token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"get-token"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get auth token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "mahesh",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "61437",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/user/get-token",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"get-token"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 22 Feb 2022 18:04:54 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.9"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"78d31d8f82921b99977eda61728d7fecbaeb1304\",\n    \"user_id\": 1,\n    \"email\": \"mahesh@gmail.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8000/user/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"mahesh4\",\n    \"password\": \"mahesh61437\",\n    \"password2\": \"mahesh61437\",\n    \"email\": \"mahesh4@gmail.com\",\n    \"first_name\": \"mahesh\",\n    \"last_name\": \"2\",\n    \"is_staff\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 24861e49be9cfe8d8c1f7e4c7218545d5a3c8192",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/user/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Window",
+			"item": [
+				{
+					"name": "http://localhost:8000/event/windows/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 78d31d8f82921b99977eda61728d7fecbaeb1304",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"event_id\": 2,\n    \"start_time\": \"10:30\",\n    \"end_time\": \"10:35\",\n    \"total_seats\": 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/event/windows/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"event",
+								"windows",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/event/windows/list/10",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 78d31d8f82921b99977eda61728d7fecbaeb1304",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/event/windows/list/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"event",
+								"windows",
+								"list",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/event/windows/update/7",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 78d31d8f82921b99977eda61728d7fecbaeb1304",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"event_id\": 2,\n    \"start_time\": \"10:30\",\n    \"end_time\": \"10:35\",\n    \"available_seats\": 90,\n    \"total_seats\": 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/event/windows/update/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"event",
+								"windows",
+								"update",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/event/windows/get/4",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 78d31d8f82921b99977eda61728d7fecbaeb1304",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/event/windows/get/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"event",
+								"windows",
+								"get",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "booking/list/event/10",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 78d31d8f82921b99977eda61728d7fecbaeb1304",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/event/booking/list/event/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"event",
+								"booking",
+								"list",
+								"event",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "booking/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 552109d4575f3624a4dac7a5bc4908e0b033bc0a",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"event_id\": 1,\n    \"window_id\": 1,\n    \"no_tickets\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/event/booking/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"event",
+								"booking",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "booking/get/10",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 78d31d8f82921b99977eda61728d7fecbaeb1304",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/event/booking/get/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"event",
+								"booking",
+								"get",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "booking/list/user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 78d31d8f82921b99977eda61728d7fecbaeb1304",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/event/booking/list/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"event",
+								"booking",
+								"list",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "booking/delete/1",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 78d31d8f82921b99977eda61728d7fecbaeb1304",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/event/booking/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"event",
+								"booking",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "booking/update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 78d31d8f82921b99977eda61728d7fecbaeb1304",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"is_cancelled\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/event/booking/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"event",
+								"booking",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "booking/list/user/1",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 552109d4575f3624a4dac7a5bc4908e0b033bc0a",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/event/booking/list/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"event",
+								"booking",
+								"list",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
