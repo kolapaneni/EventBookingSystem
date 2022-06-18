@@ -52,7 +52,7 @@ class ListEventWindowsView(generics.ListAPIView):
 
     def get_queryset(self):
         if self.kwargs.get('pk'):
-            EventWindow.objects.filter(pk=self.kwargs['pk'])
+            return EventWindow.objects.filter(pk=self.kwargs['pk'])
         return EventWindow.objects.filter(event__id=self.kwargs['event_id'])
 
 
